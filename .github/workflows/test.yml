@@ -1,0 +1,17 @@
+name: Deploy RECSYS
+
+on:
+  push:
+    branches:
+      - develop
+  repository_dispatch:
+    types: [recsys-training-complete]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        run: |
+          ls -la
