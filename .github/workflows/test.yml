@@ -12,7 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: 'develop'
       - name: Setup Python
         run: |
           git rev-parse --abbrev-ref HEAD
-          git checkout 0.3.1
+          git log
