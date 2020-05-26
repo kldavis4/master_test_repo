@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - develop
-  repository_dispatch:
-    types: [recsys-training-complete]
+#  repository_dispatch:
+#    types: [recsys-training-complete]
 
 jobs:
   deploy:
